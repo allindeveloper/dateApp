@@ -71,8 +71,8 @@ const HomeScreen = () => {
             <CalendarPicker
               startFromMonday={true}
               allowRangeSelection={true}
-              minDate={new Date(2018, 1, 1)}
-              maxDate={new Date(2050, 6, 3)}
+              minDate={dayjs().toDate()}
+              maxDate={dayjs().add(6,'month').toDate()}
               weekdays={['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']}
               months={[
                 'January',
