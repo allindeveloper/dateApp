@@ -66,7 +66,7 @@ const HomeScreen = () => {
               // handleInputParentPress={handleInputCheckPress}
               value={`${dayjs(selectedStartDate).format(
                 'ddd, MMM D YYYY',
-              )} - ${dayjs(selectedEndDate).format('ddd, MMM D YYYY')}`}
+              )} - ${dayjs(selectedEndDate).isValid() ?dayjs(selectedEndDate).format('ddd, MMM D YYYY'):''}`}
             />
             <CalendarPicker
               startFromMonday={true}
