@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {NativeSyntheticEvent, ScrollView, StyleSheet, Text, TextInputChangeEventData, View} from 'react-native';
+import {
+  NativeSyntheticEvent,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInputChangeEventData,
+  View,
+} from 'react-native';
 import ContentInnerScreen from '../components/ContentInnerScreen';
 import SpaceTop from '../components/SpaceTop';
 import dayjs from 'dayjs';
@@ -27,9 +34,9 @@ const HomeScreen = () => {
     setshowCheckDialog(true);
   };
 
-  const onChangeWhere = (e: NativeSyntheticEvent<TextInputChangeEventData>)=>{
-    setwhere(e.nativeEvent.text)
-  }
+  const onChangeWhere = (e: NativeSyntheticEvent<TextInputChangeEventData>) => {
+    setwhere(e.nativeEvent.text);
+  };
   const handleCloseDialog = () => {
     setshowCheckDialog(false);
   };
@@ -56,45 +63,40 @@ const HomeScreen = () => {
             <CustomTextInput
               placeholder="CHECK-IN "
               labelText="check-in  - check-out"
-              handleInputParentPress={handleInputCheckPress}
+              // handleInputParentPress={handleInputCheckPress}
               value={`${dayjs(selectedStartDate).format(
                 'ddd, MMM D YYYY',
               )} - ${dayjs(selectedEndDate).format('ddd, MMM D YYYY')}`}
             />
-            <Dialog
-              showModal={showCheckDialog}
-              handleCloseModal={handleCloseDialog}
-              content={
-                <CalendarPicker
-                  startFromMonday={true}
-                  allowRangeSelection={true}
-                  minDate={new Date(2018, 1, 1)}
-                  maxDate={new Date(2050, 6, 3)}
-                  weekdays={['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']}
-                  months={[
-                    'January',
-                    'Febraury',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'July',
-                    'August',
-                    'September',
-                    'October',
-                    'November',
-                    'December',
-                  ]}
-                  previousTitle="Previous"
-                  nextTitle="Next"
-                  todayBackgroundColor="#e6ffe6"
-                  selectedDayColor="#000000"
-                  selectedDayTextColor="#ffffff"
-                  scaleFactor={375}
-                  onDateChange={onDateChange}
-                />
-              }
+            <CalendarPicker
+              startFromMonday={true}
+              allowRangeSelection={true}
+              minDate={new Date(2018, 1, 1)}
+              maxDate={new Date(2050, 6, 3)}
+              weekdays={['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']}
+              months={[
+                'January',
+                'Febraury',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ]}
+              previousTitle="Previous"
+              nextTitle="Next"
+              todayBackgroundColor="#e6ffe6"
+              selectedDayColor="#000000"
+              selectedDayTextColor="#ffffff"
+              scaleFactor={375}
+              onDateChange={onDateChange}
             />
+           
           </View>
         </ScrollView>
       </ContentInnerScreen>
