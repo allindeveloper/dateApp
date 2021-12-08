@@ -58,8 +58,8 @@ const HomeScreen = () => {
               labelText="check-in  - check-out"
               handleInputParentPress={handleInputCheckPress}
               value={`${dayjs(selectedStartDate).format(
-                'ddd, MMM D',
-              )} - ${dayjs(selectedEndDate).format('ddd, MMM D')}`}
+                'ddd, MMM D YYYY',
+              )} - ${dayjs(selectedEndDate).format('ddd, MMM D YYYY')}`}
             />
             <Dialog
               showModal={showCheckDialog}
@@ -88,8 +88,8 @@ const HomeScreen = () => {
                   previousTitle="Previous"
                   nextTitle="Next"
                   todayBackgroundColor="#e6ffe6"
-                  selectedDayColor="#66ff33"
-                  selectedDayTextColor="#000000"
+                  selectedDayColor="#000000"
+                  selectedDayTextColor="#ffffff"
                   scaleFactor={375}
                   onDateChange={onDateChange}
                 />
