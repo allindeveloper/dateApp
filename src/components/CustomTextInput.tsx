@@ -26,8 +26,9 @@ const CustomTextInput = ({
 }: ITextInputProps) => {
   return (
     <Fragment>
-
-      <TouchableOpacity disabled={!handleInputParentPress} onPress={handleInputParentPress}>
+      <TouchableOpacity
+        disabled={!handleInputParentPress}
+        onPress={handleInputParentPress}>
         <Text style={styles.labelText}>{labelText}</Text>
         <TextInput
           onChange={onChange}

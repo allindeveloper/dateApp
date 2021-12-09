@@ -5,6 +5,7 @@ import SpaceTop from '../components/SpaceTop';
 import dayjs from 'dayjs';
 import CustomTextInput from '../components/CustomTextInput';
 import CalendarPicker from 'react-native-calendar-picker';
+import { calendarMonths, calendarWeekDays } from '../constants/appConstants';
 
 const HomeScreen = () => {
   const [selectedStartDate, setSelectedStartDate] = useState(dayjs());
@@ -47,25 +48,12 @@ const HomeScreen = () => {
               allowRangeSelection={true}
               minDate={dayjs().toDate()}
               maxDate={dayjs().add(6, 'month').toDate()}
-              weekdays={['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']}
-              months={[
-                'January',
-                'Febraury',
-                'March',
-                'April',
-                'May',
-                'June',
-                'July',
-                'August',
-                'September',
-                'October',
-                'November',
-                'December',
-              ]}
+              weekdays={calendarWeekDays}
+              months={calendarMonths}
               restrictMonthNavigation
               previousTitle="Previous"
               nextTitle="Next"
-              todayBackgroundColor="#e6ffe6"
+              todayBackgroundColor="#ffc107"
               selectedDayColor="#000000"
               selectedDayTextColor="#ffffff"
               scaleFactor={375}
