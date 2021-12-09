@@ -6,8 +6,8 @@ This project was bootstrapped with [Create React Native App Typescript](https://
 ## Instructions
 
 - Run `npm install` command to install the dependencies
-- Run `npm run ios` to run on iOS simulator
-- Run `npm run android` to run on Android emulator
+- Run `npm run ios` or `npx react-native run-ios`  to run on iOS simulator
+- Run `npm run android` or `npx react-native run-android` to run on Android emulator
 ## Built With
 ---
 
