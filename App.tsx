@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import SpaceTop from './src/components/SpaceTop';
 import HomeScreen from './src/screens/Home';
 
@@ -13,6 +11,5 @@ const App = () => {
     </SafeAreaView>
   );
 };
-
 
 export default App;

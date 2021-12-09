@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
-import { View } from 'react-native';
+import React, {Fragment} from 'react';
+import {View} from 'react-native';
 
 export interface ISpaceTopProps {
   top?: number;
   bottom?: number;
 }
-const SpaceTop = ({top,bottom}:ISpaceTopProps) => {
+const SpaceTop = ({top, bottom}: ISpaceTopProps) => {
   return (
     <Fragment>
-      <View style={{marginTop:top,marginBottom:bottom}} /> 
+      <View style={{marginTop: top, marginBottom: bottom}} />
     </Fragment>
   );
 };

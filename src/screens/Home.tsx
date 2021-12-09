@@ -5,7 +5,7 @@ import SpaceTop from '../components/SpaceTop';
 import dayjs from 'dayjs';
 import CustomTextInput from '../components/CustomTextInput';
 import CalendarPicker from 'react-native-calendar-picker';
-import { calendarMonths, calendarWeekDays } from '../constants/appConstants';
+import {calendarMonths, calendarWeekDays} from '../constants/appConstants';
 
 const HomeScreen = () => {
   const [selectedStartDate, setSelectedStartDate] = useState(dayjs());
