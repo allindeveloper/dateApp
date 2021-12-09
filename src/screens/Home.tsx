@@ -57,6 +57,7 @@ const HomeScreen = () => {
               selectedDayColor="#000000"
               selectedDayTextColor="#ffffff"
               scaleFactor={375}
+              allowBackwardRangeSelect={true}
               onDateChange={onDateChange}
             />
           </View>
