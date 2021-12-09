@@ -36,7 +36,7 @@ const HomeScreen = () => {
 
             <CustomTextInput
               placeholder="CHECK-IN "
-              labelText="check-in - check-out"
+              labelText="check in  -  check out"
               value={`${dayjs(selectedStartDate).format('ddd, MMM D YYYY')} - ${
                 dayjs(selectedEndDate).isValid()
                   ? dayjs(selectedEndDate).format('ddd, MMM D YYYY')
